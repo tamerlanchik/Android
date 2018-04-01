@@ -10,6 +10,7 @@ import com.example.andrey.criminalintent.database.CrimeBaseHelper;
 import com.example.andrey.criminalintent.database.CrimeCursorWrapper;
 import com.example.andrey.criminalintent.database.CrimeDbSchema;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -110,6 +111,10 @@ public class CrimeLab {
             cursor.close();
         }
         return crimes;
+    }
+    public File getPhotoFile(Crime crime) {
+        File filesDir = mContext.getFilesDir();
+        return new File(filesDir, crime.getPhotoFileName());
     }
     private static ContentValues getContentValues(Crime crime) {
         ContentValues values = new ContentValues();
