@@ -56,6 +56,7 @@ public class CrimeListFragment extends Fragment {
         updateUI();
         Log.d(" ", "onCreate() CrimeListFragment");
 
+
         
 
         
